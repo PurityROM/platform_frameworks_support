@@ -19,7 +19,7 @@ LOCAL_C_INCLUDES += \
 	frameworks/rs \
 	$(rs_generated_include_dir)
 
-LOCAL_CFLAGS +=
+LOCAL_CFLAGS += $(call-cc-option,-Qunused-arguments)
 
 LOCAL_LDLIBS := -lpthread
 LOCAL_ADDITIONAL_DEPENDENCIES := $(addprefix $(rs_generated_include_dir)/,rsgApiFuncDecl.h)
