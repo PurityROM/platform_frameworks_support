@@ -2,7 +2,8 @@
 LOCAL_PATH:=$(call my-dir)
 rs_base_CFLAGS := -Werror -Wall -Wno-unused-parameter -Wno-unused-variable \
 		  -Wno-overloaded-virtual \
-		  -Qunused-arguments
+		  -Qunused-arguments \
+		  -Wno-unknown-warning-option
 ifeq ($(TARGET_BUILD_PDK), true)
   rs_base_CFLAGS += -D__RS_PDK__
 endif
